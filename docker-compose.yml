@@ -7,6 +7,7 @@ services:
     volumes:
       - grafana-data:/var/lib/grafana
       - grafana-configs:/etc/grafana
+      - ./configs/grafana/dashboards:/etc/grafana/provisioning/dashboards/
   prometheus:
     image: prom/prometheus:v2.36.0
     ports:
